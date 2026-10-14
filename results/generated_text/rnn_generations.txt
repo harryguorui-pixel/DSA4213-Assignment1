@@ -1,0 +1,8 @@
+Prompt: the future of technology
+Generated: the future of technology , and the <unk> <unk> of the <unk> <unk> , the <unk> <unk> of the <unk> <unk> , and the <unk> <unk> of the <unk> <unk> , and the <unk> <unk> of the <unk> <unk> , and the <unk> <unk> of the <unk> <unk> , and the <unk> <unk> of
+
+Prompt: in the middle of the night
+Generated: in the middle of the night , the <unk> of the <unk> is a <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> ,
+
+Prompt: scientists have discovered
+Generated: scientists have discovered the <unk> <unk> of the <unk> . <eos>

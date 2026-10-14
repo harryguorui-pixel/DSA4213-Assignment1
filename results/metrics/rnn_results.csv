@@ -1,0 +1,2 @@
+model,vocab_size,embedding_dim,hidden_dim,num_layers,best_epoch,train_loss,best_validation_loss,validation_perplexity,test_cross_entropy,test_perplexity,training_time_seconds,model_size_mb,trainable_parameters,evaluation_time_seconds,evaluation_tokens_per_second,evaluated_test_tokens,device,gpu
+RNN,10000,100,256,2,5,4.587732223220166,4.728953801438115,113.1770947370819,4.654337812554439,105.03964103270506,61.59655650000059,14.47312068939209,3793232,0.5444723000000522,463891.3678436456,252576,cuda,NVIDIA GeForce RTX 4060 Laptop GPU
