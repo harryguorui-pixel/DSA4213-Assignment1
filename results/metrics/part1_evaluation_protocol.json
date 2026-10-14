@@ -1,0 +1,13 @@
+{
+  "protocol": "common_32_token_windows",
+  "window_size": 32,
+  "target_start": 2,
+  "batch_size": 64,
+  "num_windows": 7893,
+  "evaluated_tokens": 236790,
+  "context_boundary": "window_only",
+  "internal_eos_reset": false,
+  "checkpoint_selection": "validation",
+  "test_used_for_tuning": false,
+  "notes": "Identical target positions and maximum context windows. Models retain their original training boundary conventions."
+}
