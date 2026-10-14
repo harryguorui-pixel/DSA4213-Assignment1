@@ -1,0 +1,2 @@
+model,smoothing_k,validation_cross_entropy,validation_perplexity,test_cross_entropy,test_perplexity,training_time_seconds,model_size_mb,evaluation_time_seconds,evaluation_tokens_per_second,evaluated_test_tokens,unique_trigrams,unique_contexts,training_tokens
+Trigram Add-k,0.1,7.051497751392514,1154.5867322970862,6.968922851563318,1063.077041826017,3.556442999997671,28.39381504058838,0.2553311000010581,966572.4230184936,246796,1180219,430403,2145886
