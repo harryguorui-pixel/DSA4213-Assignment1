@@ -1,0 +1,28 @@
+project:
+  name: "DSA4213 Assignment 1"
+  seed: 42
+
+data:
+  dataset_name: "Salesforce/wikitext"
+  dataset_config: "wikitext-2-raw-v1"
+  vocab_size: 10000
+  sequence_length: 32
+  batch_size: 64
+  lowercase: true
+
+model:
+  embedding_dim: 100
+  hidden_dim: 256
+  num_layers: 2
+  dropout: 0.2
+
+training:
+  epochs: 5
+  learning_rate: 0.001
+  optimizer: "adam"
+  device: "cuda"
+
+paths:
+  processed_dir: "data/processed"
+  results_dir: "results"
+  checkpoints_dir: "checkpoints"
