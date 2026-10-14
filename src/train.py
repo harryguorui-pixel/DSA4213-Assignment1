@@ -95,7 +95,8 @@ def train_model(
     pad_id=0,
     patience=3,
     checkpoint_path="checkpoints/rnn_best.pt",
-    figure_path="results/figures/rnn_loss.png"
+    figure_path="results/figures/rnn_loss.png",
+    model_name="RNN"
 ):
     criterion = nn.CrossEntropyLoss(
         ignore_index=pad_id
@@ -120,6 +121,10 @@ def train_model(
     Path(checkpoint_path).parent.mkdir(
         parents=True, exist_ok=True
     )
+
+    if device.type == "cuda":
+        torch.cuda.reset_peak_memory_stats()
+        torch.cuda.synchronize()
 
     start_time = time.perf_counter()
 
@@ -189,6 +194,13 @@ def train_model(
 
     training_time = time.perf_counter() - start_time
 
+    if device.type == "cuda":
+        peak_memory_mb = (
+            torch.cuda.max_memory_allocated()
+            / (1024 ** 2)
+        )
+        print(f"Peak GPU memory: {peak_memory_mb:.2f} MB")
+
     checkpoint = torch.load(
         checkpoint_path,
         map_location=device,
@@ -221,7 +233,7 @@ def train_model(
 
     plt.xlabel("Epoch")
     plt.ylabel("Cross-Entropy Loss")
-    plt.title("RNN Training and Validation Loss")
+    plt.title(f"{model_name} Training and Validation Loss")
     plt.legend()
     plt.grid(alpha=0.3)
     plt.tight_layout()
