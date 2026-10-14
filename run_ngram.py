@@ -76,12 +76,30 @@ def main():
 
     vocab_size = len(token_to_id)
 
+    with open(
+        "results/metrics/ngram_best_config.json",
+        "r",
+        encoding="utf-8"
+    ) as f:
+        best_config = json.load(f)
+
+    best_k = best_config["best_k"]
+
+    print(f"Using best smoothing k = {best_k}")
+
     model = TrigramLanguageModel(
+        vocab_size=vocab_size,
+        k=best_k,
+        pad_id=token_to_id["<pad>"],
+        eos_id=token_to_id["<eos>"]
+    )
+
+    """model = TrigramLanguageModel(
         vocab_size=vocab_size,
         k=0.1,
         pad_id=token_to_id["<pad>"],
         eos_id=token_to_id["<eos>"]
-    )
+    )"""
 
     print("=" * 60)
     print("Training Trigram Language Model")
@@ -142,7 +160,7 @@ def main():
 
     metrics = {
         "model": "Trigram Add-k",
-        "smoothing_k": 0.1,
+        "smoothing_k": best_k,
         "validation_cross_entropy": val_results["cross_entropy"],
         "validation_perplexity": val_results["perplexity"],
         "test_cross_entropy": test_results["cross_entropy"],
