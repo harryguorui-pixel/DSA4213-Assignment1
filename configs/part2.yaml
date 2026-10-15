@@ -1,0 +1,52 @@
+
+project:
+  name: "DSA4213 Assignment 1 - Part II"
+  seed: 42
+
+data:
+  processed_dir: "data/processed"
+  vocab_size: 10000
+  sequence_length: 32
+  batch_size: 64
+
+model:
+  architecture: "rnn"
+  embedding_dim: 100
+  hidden_dim: 256
+  num_layers: 2
+  dropout: 0.2
+
+training:
+  epochs: 5
+  learning_rate: 0.001
+  optimizer: "adam"
+  patience: 3
+  grad_clip: 1.0
+  device: "cuda"
+
+embeddings:
+  skipgram:
+    vector_size: 100
+    window: 5
+    min_count: 1
+    sg: 1
+    workers: 1
+    epochs: 5
+    negative: 5
+    seed: 42
+
+  glove:
+    name: "glove-wiki-gigaword-100"
+    vector_size: 100
+    oov_strategy: "random_normal"
+    oov_seed: 42
+
+paths:
+  part1_rnn_checkpoint: "checkpoints/rnn_best.pt"
+
+  embedding_dir: "data/embeddings"
+  checkpoint_dir: "checkpoints/part2"
+
+  figure_dir: "results/figures/part2"
+  metrics_dir: "results/metrics/part2"
+  generated_dir: "results/generated_text/part2"
