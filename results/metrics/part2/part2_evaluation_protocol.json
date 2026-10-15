@@ -1,0 +1,14 @@
+{
+  "protocol": "common_32_token_windows",
+  "window_size": 32,
+  "target_start": 2,
+  "batch_size": 64,
+  "evaluation_windows": 7893,
+  "evaluated_tokens": 236790,
+  "context_boundary": "window_only",
+  "internal_eos_reset": false,
+  "checkpoint_selection": "validation",
+  "test_used_for_tuning": false,
+  "baseline": "Part I RNN",
+  "same_protocol_as_part1": true
+}

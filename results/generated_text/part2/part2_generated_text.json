@@ -1,0 +1,65 @@
+{
+  "decoding": "greedy",
+  "max_new_tokens": 50,
+  "prompts": [
+    "the future of technology",
+    "in the middle of the night",
+    "scientists have discovered"
+  ],
+  "results": {
+    "A": {
+      "embedding": "Random Trainable",
+      "checkpoint": "checkpoints/rnn_best.pt",
+      "generations": [
+        {
+          "prompt": "the future of technology",
+          "generated_text": "the future of technology , and the <unk> <unk> of the <unk> <unk> , the <unk> <unk> of the <unk> <unk> , and the <unk> <unk> of the <unk> <unk> , and the <unk> <unk> of the <unk> <unk> , and the <unk> <unk> of the <unk> <unk> , and the <unk> <unk> of"
+        },
+        {
+          "prompt": "in the middle of the night",
+          "generated_text": "in the middle of the night , the <unk> of the <unk> is a <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> ,"
+        },
+        {
+          "prompt": "scientists have discovered",
+          "generated_text": "scientists have discovered the <unk> <unk> of the <unk> . <eos>"
+        }
+      ]
+    },
+    "B": {
+      "embedding": "Skip-gram Frozen",
+      "checkpoint": "checkpoints/part2/rnn_skipgram_best.pt",
+      "generations": [
+        {
+          "prompt": "the future of technology",
+          "generated_text": "the future of technology <unk> . <eos>"
+        },
+        {
+          "prompt": "in the middle of the night",
+          "generated_text": "in the middle of the night . <eos>"
+        },
+        {
+          "prompt": "scientists have discovered",
+          "generated_text": "scientists have discovered the <unk> <unk> <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk> , <unk>"
+        }
+      ]
+    },
+    "C": {
+      "embedding": "GloVe Frozen",
+      "checkpoint": "checkpoints/part2/rnn_glove_best.pt",
+      "generations": [
+        {
+          "prompt": "the future of technology",
+          "generated_text": "the future of technology and <unk> . <eos>"
+        },
+        {
+          "prompt": "in the middle of the night",
+          "generated_text": "in the middle of the night . <eos>"
+        },
+        {
+          "prompt": "scientists have discovered",
+          "generated_text": "scientists have discovered in the <unk> . <eos>"
+        }
+      ]
+    }
+  }
+}
