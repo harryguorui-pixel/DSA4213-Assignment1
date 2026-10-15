@@ -1,0 +1,39 @@
+project:
+  name: "DSA4213 Assignment 1 - Part III"
+  seed: 42
+
+data:
+  dataset_name: "fancyzhx/ag_news"
+  train_samples: 8000
+  val_samples: 2000
+  max_length: 32
+  batch_size: 64
+  lowercase: true
+
+model:
+  architecture: "rnn"
+  embedding_dim: 100
+  hidden_dim: 256
+  num_layers: 2
+  dropout: 0.2
+  num_classes: 4
+  representation: "final_hidden"
+
+training:
+  epochs: 10
+  learning_rate: 0.001
+  optimizer: "adam"
+  patience: 3
+  device: "cuda"
+
+paths:
+  vocab_path: "data/processed/vocab.json"
+  processed_dir: "data/part3/processed"
+
+  checkpoint_random: "checkpoints/rnn_best.pt"
+  checkpoint_skipgram: "checkpoints/part2/rnn_skipgram_best.pt"
+  checkpoint_glove: "checkpoints/part2/rnn_glove_best.pt"
+
+  checkpoint_dir: "checkpoints/part3"
+  metrics_dir: "results/metrics/part3"
+  figure_dir: "results/figures/part3"
