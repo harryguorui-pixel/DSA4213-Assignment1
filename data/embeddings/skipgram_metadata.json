@@ -1,0 +1,42 @@
+{
+  "experiment": "Part II - Self-trained Skip-gram",
+  "source": "WikiText-2 training split only",
+  "method": "Gensim Word2Vec Skip-gram",
+  "seed": 42,
+  "vector_size": 100,
+  "window": 5,
+  "min_count": 1,
+  "sg": 1,
+  "workers": 1,
+  "epochs": 5,
+  "negative": 5,
+  "subsampling": 0.001,
+  "training_time_seconds": 18.136044499999116,
+  "sentence_count": 23684,
+  "usable_training_tokens": 1958874,
+  "excluded_token_counts": {
+    "<pad>": 0,
+    "<unk>": 163245,
+    "<eos>": 23767
+  },
+  "coverage": {
+    "covered_words": 9997,
+    "eligible_words": 9997,
+    "coverage": 1.0,
+    "missing_words_count": 0,
+    "missing_words_sample": []
+  },
+  "special_token_strategy": {
+    "<pad>": "zero vector",
+    "<unk>": "seeded random normal N(0, 0.1)",
+    "<eos>": "zero vector"
+  },
+  "other_oov_strategy": "seeded random normal N(0, 0.1)",
+  "vocab_sha256": "a883d74999b01d3a928f2c55224d50fcd6a8acc32daed776905c8202922eef25",
+  "train_sha256": "078d31281b57c7fa3e69320a627bbe52062d972ad8717fafd88363351b418284",
+  "embedding_shape": [
+    10000,
+    100
+  ],
+  "embedding_dtype": "float32"
+}
