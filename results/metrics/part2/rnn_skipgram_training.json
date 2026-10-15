@@ -1,0 +1,26 @@
+{
+  "setting": "B",
+  "embedding": "Skip-gram Frozen",
+  "seed": 42,
+  "epochs_completed": 5,
+  "best_epoch": 5,
+  "best_validation_loss": 4.650764168960236,
+  "training_time_seconds": 53.77533930000027,
+  "train_loss": [
+    5.974161563229222,
+    4.987151791056809,
+    4.7321757229524515,
+    4.606042761206645,
+    4.523306265992011
+  ],
+  "val_loss": [
+    5.132562653945535,
+    4.805464253838285,
+    4.71238878337835,
+    4.671134272359909,
+    4.650764168960236
+  ],
+  "embedding_frozen": true,
+  "checkpoint_path": "checkpoints\\part2\\rnn_skipgram_best.pt",
+  "figure_path": "results\\figures\\part2\\rnn_skipgram_loss.png"
+}

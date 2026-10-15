@@ -1,0 +1,26 @@
+{
+  "setting": "C",
+  "embedding": "GloVe Frozen",
+  "seed": 42,
+  "epochs_completed": 5,
+  "best_epoch": 5,
+  "best_validation_loss": 4.667005753455861,
+  "training_time_seconds": 55.72698399999899,
+  "train_loss": [
+    5.777155064701689,
+    5.032518023094093,
+    4.812372327714855,
+    4.693658139227882,
+    4.61458739778145
+  ],
+  "val_loss": [
+    5.100072403902056,
+    4.839575334808821,
+    4.735547618571775,
+    4.695425980297438,
+    4.667005753455861
+  ],
+  "embedding_frozen": true,
+  "checkpoint_path": "checkpoints\\part2\\rnn_glove_best.pt",
+  "figure_path": "results\\figures\\part2\\rnn_glove_loss.png"
+}
