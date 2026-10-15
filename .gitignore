@@ -32,3 +32,4 @@ data/embeddings/*.npy
 
 # Part III generated data
 data/part3/processed/
+data/part3/features/
