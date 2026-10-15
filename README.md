@@ -369,7 +369,7 @@ results/
         part2/
 ```
 
-Large generated datasets, cached representations, and potentially large model checkpoints may be excluded from version control. If they are unavailable in a fresh clone, reproduce them using the commands above.
+All nine trained model checkpoints are included in the `feature/part3` branch for reproducibility. Generated datasets and cached representations are excluded from version control and can be recreated using the documented preprocessing and feature-extraction commands. If they are unavailable in a fresh clone, reproduce them using the commands above.
 
 The Part III workflow requires the three pretrained RNN checkpoints from Parts I and II.
 
